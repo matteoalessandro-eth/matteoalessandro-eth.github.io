@@ -3,7 +3,7 @@
  * Simulating a command line interface with vanilla JS
  *
  * @version : 1.2.0
- * @author : Paulo Nunes (https://syndicatefx.com)
+ * @author : Paulo Nunes (http://syndicatefx.com)
  * @demo : https://codepen.io/syndicatefx/pen/jPxXpz
  * @license: MIT
  */
@@ -92,7 +92,7 @@ var input = document.querySelector("input"),
 	block = document.getElementsByTagName("section");
 
 window.onload = function() {
-	typeWriter("#home","true",100);
+	typeWriter("#home","true",10);
 
 	var sectionArray = [];
 	for(var i = 0;i < block.length;i++) {
@@ -104,12 +104,16 @@ window.onload = function() {
 		if((e.keyCode || e.which) == 13) {// ENTER key pressed
 			var targetValue = input.value;
 			var destination = "#" + targetValue;
-			typeWriter(destination,"true",10);
+			typeWriter(destination,"true",5);
 			input.value = "";
-
+            
 			if(sectionArray.includes(targetValue) == false) {
 				typeWriter("#error","true",10);
 			}
+
+            if(destination == "#exit"){
+                setTimeout(function(){window.close()}, 1500)
+            }
 		}
 	});
 };
