@@ -121,27 +121,12 @@
 
  .command{
    display: none;
-   /* max-width: 20em; */
+   max-width: 80vw;
+   min-width: 20em;
    color: #39ff14;
    font-weight: 700;
    margin: 2em 0;
  }
-
- #input{
-    display: inline;
-    word-break: break-all;
-    outline: none;
-    visibility: visible;
-}
-
-#caret{
-    border: 0;
-    padding: 0;
-    outline: none;
-    background-color: #fff;
-    display: inline-block;
-}
- 
  
  section{
    display: none;
