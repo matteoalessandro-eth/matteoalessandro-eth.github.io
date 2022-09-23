@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 
 * {
-    background-color: #0700d8;
+    background-color: black;
     font-family: 'Fira Mono', monospace;
     color: white;
     padding: 0;
@@ -17,6 +17,7 @@ h1{
 }
 
 a{
+    color:green;
     text-decoration: none;
 }
 
