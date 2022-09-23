@@ -102,7 +102,7 @@ window.onload = function() {
 
 	input.addEventListener('keyup', function(e) {
 		if((e.keyCode || e.which) == 13) {// ENTER key pressed
-			var targetValue = input.value;
+			var targetValue = (input.value).toLowerCase;
 			var destination = "#" + targetValue;
 			typeWriter(destination,"true",5);
 			input.value = "";
@@ -112,7 +112,7 @@ window.onload = function() {
 			}
 
             if(destination == "#exit"){
-                setTimeout(function(){window.close()}, 1500)
+                setTimeout(function(){open("_blank", "_self")},1500)
             }
 		}
 	});
