@@ -92,7 +92,7 @@ var input = document.querySelector("input"),
 	block = document.getElementsByTagName("section");
 
 window.onload = function() {
-	typeWriter("#home","true",1000);
+	typeWriter("#home","true",100);
 
 	var sectionArray = [];
 	for(var i = 0;i < block.length;i++) {
