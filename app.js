@@ -104,16 +104,31 @@ window.onload = function() {
 		if((e.keyCode || e.which) == 13) {// ENTER key pressed
 			var targetValue = (input.value).toLowerCase();
 			var destination = "#" + targetValue;
-			typeWriter(destination,"true",5);
-			input.value = "";
-            
-			if(sectionArray.includes(targetValue) == false) {
+
+            if(sectionArray.includes(targetValue) == false) {
 				typeWriter("#error","true",10);
 			}
 
-            if(destination == "#exit"){
+            else if(destination == "#exit"){
+                typeWriter("#exit", "true", 10);
                 setTimeout(function(){open("_blank", "_self")},1500)
             }
+
+            else if(destination == "#private"){
+                window.location.href = "https://youtu.be/dQw4w9WgXcQ"
+            }
+
+            else if(destination == "#meow"){
+                typeWriter("#meow", "true", 10);
+                setTimeout(function(){window.open("https://i.pinimg.com/564x/16/ca/b1/16cab153397fc070d5369635ba891e8d.jpg")}, 1000);
+            }
+            
+            else{
+			typeWriter(destination,"true",5);
+            }
+            
+            input.value = "";
+            
 		}
 	});
 };
